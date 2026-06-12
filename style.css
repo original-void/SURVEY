@@ -1,0 +1,165 @@
+:root {
+  --bg: #f8fafc;
+  --text: #1e293b;
+  --accent: #3b82f6;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --text: #e2e8f0;
+  --accent: #60a5fa;
+  --card: #1e293b;
+  --border: #334155;
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: var(--text);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.note-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.note-card h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+}
+
+.note-card h3 {
+  font-size: 1.25rem;
+  margin: 1.5rem 0.75rem;
+  color: var(--accent);
+}
+
+.note-card h4 {
+  font-size: 1.1rem;
+  margin: 1rem 0 0.5rem;
+  font-weight: 600;
+}
+
+.note-card p {
+  margin-bottom: 0.75rem;
+}
+
+.note-card b {
+  font-weight: 600;
+}
+
+.note-card table {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.note-card th, .note-card td {
+  text-align: left;
+}
+
+#themeToggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s;
+}
+
+#themeToggle:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 3rem;
+  border-top: 1px solid var(--border);
+  color: var(--text);
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  .note-card {
+    padding: 1.25rem;
+  }
+  .note-card h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* LaTeX styling */
+.katex {
+  font-size: 1.1em !important;
+}
