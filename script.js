@@ -197,7 +197,7 @@ const notes = [
       <p>3. <b>Chaining:</b> This method involves direct measurement with a tape or chain. Steel tape is commonly used in this type of survey.</p>
       
       <div style="text-align:center; margin:1.5rem 0;">
-        <svg width="300" height="120" viewBox="0 300 120" style="border:1px solid var(--border); border-radius:8px; background:var(--bg)">
+        <svg width="300" height="120" viewBox="0 0 300 120" style="border:1px solid var(--border); border-radius:8px; background:var(--bg)">
           <text x="150" y="20" text-anchor="middle" fill="var(--text)" font-size="14">Chaining Method</text>
           <line x1="40" y1="80" x2="260" y2="80" stroke="var(--accent)" stroke-width="3"/>
           <rect x="35" y="70" width="10" height="20" fill="gray"/><text x="25" y="95" fill="var(--text)" font-size="12">Start</text>
@@ -394,8 +394,7 @@ const notes = [
       
       <p>Ranging rods are inserted as close as possible to the station pegs so that the position of the peg may be located from a distance. In case of long lines, they are placed immediately btn the stations & lined in by eye to enable a straight line to be measured.</p>
       
-            <div style="text-align:center; margin:1.5rem 0;">
-        <svg width="300" height="120" viewBox="0 0 300 120" style="border:1px solid var(--border); border-radius:8px; background:var(--bg)">
+      <div style="text-align:center; margin:        <svg width="300" height="120" viewBox="0 0 300 120" style="border:1px solid var(--border); border-radius:8px; background:var(--bg)">
           <text x="150" y="20" text-anchor="middle" fill="var(--text)" font-size="14">Chaining a Line</text>
           <line x1="40" y1="80" x2="260" y2="80" stroke="var(--accent)" stroke-width="3"/>
           <circle cx="40" cy="80" r="4" fill="red"/><text x="25" y="95" fill="var(--text)" font-size="12">Start</text>
@@ -471,9 +470,247 @@ const notes = [
       <p>RL of next point = RL of previous point + Rise OR - Fall</p>
       <p><b>Check:</b> ΣBS - ΣFS = ΣRise - ΣFall = Last RL - First RL</p>
       
+      <h4>Example 1: Simple Rise & Fall</h4>
+      <p>The following staff readings were taken: 2.655, 1.230, 0.955, 2.140, 1.605, 2.780, 1.045. First reading on BM of RL 100.000m.</p>
+      
+      <div style="overflow-x:auto; margin:1rem 0;">
+        <table style="width:100%; border-collapse:collapse; font-size:14px;">
+          <tr style="background:var(--accent); color:white;">
+            <th style="padding:8px; border:1px solid var(--border);">BS</th>
+            <th style="padding:8px; border:1px solid var(--border);">IS</th>
+            <th style="padding:8px; border:1px solid var(--border);">FS</th>
+            <th style="padding:8px; border:1px solid var(--border);">Rise</th>
+            <th style="padding:8px; border:1px solid var(--border);">Fall</th>
+            <th style="padding:8px; border:1px solid var(--border);">RL</th>
+            <th style="padding:8px; border:1px solid var(--border);">Remarks</th>
+          </tr>
+          <tr>
+            <td style="padding:6px; border:1px solid var(--border);">2.655</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">100.000</td>
+            <td style="padding:6px; border:1px solid var(--border);">BM</td>
+          </tr>
+          <tr>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">1.230</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">1.425</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">101.425</td>
+            <td style="padding:6px; border:1px solid var(--border);">A</td>
+          </tr>
+          <tr>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">0.955</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">0.275</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">101.700</td>
+            <td style="padding:6px; border:1px solid var(--border);">B</td>
+          </tr>
+          <tr>
+            <td style="padding:6px; border:1px solid var(--border);">2.140</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">1.605</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">0.650</td>
+            <td style="padding:6px; border:1px solid var(--border);">101.050</td>
+            <td style="padding:6px; border:1px solid var(--border);">CP1</td>
+          </tr>
+          <tr>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">2.780</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">1.175</td>
+            <td style="padding:6px; border:1px solid var(--border);">99.875</td>
+            <td style="padding:6px; border:1px solid var(--border);">C</td>
+          </tr>
+          <tr>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">1.045</td>
+            <td style="padding:6px; border:1px solid var(--border);">1.735</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">101.610</td>
+            <td style="padding:6px; border:1px solid var(--border);">D</td>
+          </tr>
+          <tr style="font-weight:600;">
+            <td style="padding:6px; border:1px solid var(--border);">ΣBS=4.795</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">ΣFS=3.185</td>
+            <td style="padding:6px; border:1px solid var(--border);">ΣRise=3.435</td>
+            <td style="padding:6px; border:1px solid var(--border);">ΣFall=1.825</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+          </tr>
+        </table>
+      </div>
+      <p><b>Arithmetic Check:</b> ΣBS - ΣFS = 4.795 - 3.185 = 1.610, ΣRise - ΣFall = 3.435 - 1.825 = 1.610, Last RL - First RL = 101.610 - 100.000 = 1.610 ✓</p>
+
+      <h4>Example 2: Rise & Fall with Multiple Change Points</h4>
+      <p>Staff readings: 1.850, 2.345, 1.955, 0.780, 2.650, 1.125, 2.895, 0.650. RL of BM = 250.450m</p>
+      
+      <div style="overflow-x:auto; margin:1rem 0;">
+        <table style="width:100%; border-collapse:collapse; font-size:14px;">
+          <tr style="background:var(--accent); color:white;">
+            <th style="padding:8px; border:1px solid var(--border);">BS</th>
+            <th style="padding:8px; border:1px solid var(--border);">IS</th>
+            <th style="padding:8px; border:1px solid var(--border);">FS</th>
+            <th style="padding:8px; border:1px solid var(--border);">Rise</th>
+            <th style="padding:8px; border:1px solid var(--border);">Fall</th>
+            <th style="padding:8px; border:1px solid var(--border);">RL</th>
+            <th style="padding:8px; border:1px solid var(--border);">Remarks</th>
+          </tr>
+          <tr>
+            <td style="padding:6px; border:1px solid var(--border);">1.850</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">250.450</td>
+            <td style="padding:6px; border:1px solid var(--border);">BM</td>
+          </tr>
+          <tr>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">2.345</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">0.495</td>
+            <td style="padding:6px; border:1px solid var(--border);">249.955</td>
+            <td style="padding:6px; border:1px solid var(--border);">A</td>
+          </tr>
+          <tr>
+            <td style="padding:6px; border:1px solid var(--border);">1.955</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">0.780</td>
+            <td style="padding:6px; border:1px solid var(--border);">1.565</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">251.520</td>
+            <td style="padding:6px; border:1px solid var(--border);">CP1</td>
+          </tr>
+          <tr>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">2.650</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">1.870</td>
+            <td style="padding:6px; border:1px solid var(--border);">249.650</td>
+            <td style="padding:6px; border:1px solid var(--border);">B</td>
+          </tr>
+          <tr>
+            <td style="padding:6px; border:1px solid var(--border);">1.125</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">2.895</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">1.770</td>
+            <td style="padding:6px; border:1px solid var(--border);">247.880</td>
+            <td style="padding:6px; border:1px solid var(--border);">CP2</td>
+          </tr>
+          <tr>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">0.650</td>
+            <td style="padding:6px; border:1px solid var(--border);">0.475</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">248.355</td>
+            <td style="padding:6px; border:1px solid var(--border);">C</td>
+          </tr>
+          <tr style="font-weight:600;">
+            <td style="padding:6px; border:1px solid var(--border);">ΣBS=4.930</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">ΣFS=7.025</td>
+            <td style="padding:6px; border:1px solid var(--border);">ΣRise=2.040</td>
+            <td style="padding:6px; border:1px solid var(--border);">ΣFall=4.135</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+          </tr>
+        </table>
+      </div>
+      <p><b>Arithmetic Check:</b> ΣBS - ΣFS = 4.930 - 7.025 = -2.095, ΣRise - ΣFall = 2.040 - 4.135 = -2.095, Last RL - First RL = 248.355 - 250.450 = -2.095 ✓</p>
+
       <p><b>2. Height of Instrument Method:</b></p>
       <p>HI = RL + BS, RL = HI - FS or IS</p>
       <p><b>Check:</b> ΣBS - ΣFS = Last RL - First RL</p>
+      
+      <h4>Example 1: Height of Instrument Method</h4>
+      <p>Same data as Rise & Fall Example 1: 2.655, 1.230, 0.955, 2.140, 1.605, 2.780, 1.045. BM RL = 100.000m</p>
+      
+      <div style="overflow-x:auto; margin:1rem 0;">
+        <table style="width:100%; border-collapse:collapse; font-size:14px;">
+          <tr style="background:var(--accent); color:white;">
+            <th style="padding:8px; border:1px solid var(--border);">BS</th>
+            <th style="padding:8px; border:1px solid var(--border);">IS</th>
+            <th style="padding:8px; border:1px solid var(--border);">FS</th>
+            <th style="padding:8px; border:1px solid var(--border);">HI</th>
+            <th style="padding:8px; border:1px solid var(--border);">RL</th>
+            <th style="padding:8px; border:1px solid var(--border);">Remarks</th>
+          </tr>
+          <tr>
+            <td style="padding:6px; border:1px solid var(--border);">2.655</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">102.655</td>
+            <td style="padding:6px; border:1px solid var(--border);">100.000</td>
+            <td style="padding:6px; border:1px solid var(--border);">BM</td>
+          </tr>
+          <tr>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">1.230</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">101.425</td>
+            <td style="padding:6px; border:1px solid var(--border);">A</td>
+          </tr>
+          <tr>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">0.955</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">101.700</td>
+            <td style="padding:6px; border:1px solid var(--border);">B</td>
+          </tr>
+          <tr>
+            <td style="padding:6px; border:1px solid var(--border);">2.140</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">1.605</td>
+            <td style="padding:6px; border:1px solid var(--border);">103.190</td>
+            <td style="padding:6px; border:1px solid var(--border);">101.050</td>
+            <td style="padding:6px; border:1px solid var(--border);">CP1</td>
+          </tr>
+          <tr>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">2.780</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">99.875</td>
+            <td style="padding:6px; border:1px solid var(--border);">C</td>
+          </tr>
+          <tr>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">1.045</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">101.610</td>
+            <td style="padding:6px; border:1px solid var(--border);">D</td>
+          </tr>
+          <tr style="font-weight:600;">
+            <td style="padding:6px; border:1px solid var(--border);">ΣBS=4.795</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">ΣFS=3.185</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+          </tr>
+        </table>
+      </div>
+      <p><b>Arithmetic Check:</b> ΣBS - ΣFS = 4.795 - 3.185 = 1.610, Last RL - First RL = 101.610 - 100.000 = 1.610 ✓</p>
+
+      <h4>Example 2: Height of Instrument - Fly Levelling</h4>
+      <p>Carry forward a level from BM 45.250m to new BM. Readings: 1.625, 2.105, 3.120, 0.955, 2.450, 1.875, 0.665</p>
       
       <div style="overflow-x:auto; margin:1rem 0;">
         <table style="width:100%; border-collapse:collapse; font-size:14px;">
@@ -489,29 +726,54 @@ const notes = [
             <td style="padding:6px; border:1px solid var(--border);">1.625</td>
             <td style="padding:6px; border:1px solid var(--border);"></td>
             <td style="padding:6px; border:1px solid var(--border);"></td>
-            <td style="padding:6px; border:1px solid var(--border);">101.625</td>
-            <td style="padding:6px; border:1px solid var(--border);">100.000</td>
-            <td style="padding:6px; border:1px solid var(--border);">BM</td>
+            <td style="padding:6px; border:1px solid var(--border);">46.875</td>
+            <td style="padding:6px; border:1px solid var(--border);">45.250</td>
+            <td style="padding:6px; border:1px solid var(--border);">BM1</td>
           </tr>
           <tr>
             <td style="padding:6px; border:1px solid var(--border);"></td>
             <td style="padding:6px; border:1px solid var(--border);">2.105</td>
             <td style="padding:6px; border:1px solid var(--border);"></td>
             <td style="padding:6px; border:1px solid var(--border);"></td>
-            <td style="padding:6px; border:1px solid var(--border);">99.520</td>
+            <td style="padding:6px; border:1px solid var(--border);">44.770</td>
             <td style="padding:6px; border:1px solid var(--border);">A</td>
           </tr>
           <tr>
+            <td style="padding:6px; border:1px solid var(--border);">0.955</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">3.120</td>
+            <td style="padding:6px; border:1px solid var(--border);">44.710</td>
+            <td style="padding:6px; border:1px solid var(--border);">43.755</td>
+            <td style="padding:6px; border:1px solid var(--border);">CP1</td>
+          </tr>
+          <tr>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">2.450</td>
             <td style="padding:6px; border:1px solid var(--border);"></td>
             <td style="padding:6px; border:1px solid var(--border);"></td>
-            <td style="padding:6px; border:1px solid var(--border);">0.865</td>
-            <td style="padding:6px; border:1px solid var(--border);"></td>
-            <td style="padding:6px; border:1px solid var(--border);">100.760</td>
+            <td style="padding:6px; border:1px solid var(--border);">42.260</td>
             <td style="padding:6px; border:1px solid var(--border);">B</td>
+          </tr>
+          <tr>
+            <td style="padding:6px; border:1px solid var(--border);">0.665</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">1.875</td>
+            <td style="padding:6px; border:1px solid var(--border);">43.500</td>
+            <td style="padding:6px; border:1px solid var(--border);">42.835</td>
+            <td style="padding:6px; border:1px solid var(--border);">CP2</td>
+          </tr>
+          <tr style="font-weight:600;">
+            <td style="padding:6px; border:1px solid var(--border);">ΣBS=3.245</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">ΣFS=4.995</td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);"></td>
+            <td style="padding:6px; border:1px solid var(--border);">BM2</td>
           </tr>
         </table>
       </div>
-      
+      <p><b>Arithmetic Check:</b> ΣBS - ΣFS = 3.245 - 4.995 = -1.750, Last RL - First RL = 42.835 - 45.250 = -2.415 + 0.665 = -1.750 ✓</p>
+
       <h3>Reciprocal Levelling</h3>
       <p>Used when points are across a river/wide obstacle to eliminate curvature & refraction errors.</p>
       <p>True difference = (h_A + h_B) / 2</p>
@@ -524,8 +786,8 @@ const notes = [
           <text x="160" y="165" text-anchor="middle" fill="var(--text)" font-size="12">River</text>
           <rect x="50" y="100" width="10" height="40" fill="gray"/><text x="45" y="95" fill="var(--text)" font-size="12">A</text>
           <rect x="260" y="100" width="10" height="40" fill="gray"/><text x="255" y="95" fill="var(--text)" font-size="12">B</text>
-          <line x1="60" y1="105" x2="270" y2="105" stroke="red" stroke-width="1" stroke-dasharray="3"/>
-          <line x1="270" y1="105" x2="60" y2="105" stroke="red" stroke-width="1" stroke-dasharray="3"/>
+          <line x1="60" y1="105" x2="270" y2="105" stroke="red" stroke-width="1" stroke-dasharray="3          <line x1="270" y1="105" x2="60" y2="105" stroke="red" stroke-width="1" stroke-dasharray="3"/>
+          <text x="160" y="125" text-anchor="middle" fill="var(--text)" font-size="12">Readings taken from both banks</text>
         </svg>
       </div>
       
@@ -593,4 +855,4 @@ const notes = [
   }
 ];
 
-export {notes};
+export { notes };
